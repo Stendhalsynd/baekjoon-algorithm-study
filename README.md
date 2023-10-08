@@ -34,12 +34,12 @@
 
 # ✏️ commit 규칙
 
-- commit 메세지 : [플랫폼] 문제번호_문제이름 / 난이도 / 걸린시간
+- commit 메세지 : [플랫폼] 문제번호_문제이름 / 난이도 / 걸린시간 / 문제풀이성공여부
 - description : 문제주소 (option)
 - merge 가 아니더라도 push 를 해주셔야 다른 분들이 코드리뷰를 할 수 있습니다!
 
 ```
-git commit -m "[BOJ] 2548_대표자연수 / 실버3 / 1분" -m "https://www.acmicpc.net/problem/2548"
+git commit -m "[BOJ] 2548_대표자연수 / 실버3 / 1분 / O(X) " -m "https://www.acmicpc.net/problem/2548"
 ```
   
 - 코드를 커밋하는 경우가 아닐때 ( readme 수정, 이름 변경, 코드 수정, 주석 추가 및 오타 수정 등 )는 자유롭게 커밋해주세요.

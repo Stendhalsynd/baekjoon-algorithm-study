@@ -88,7 +88,3 @@ git commit -m "[BOJ] 2548_대표자연수 / 실버3 / 1분 / O(X) " -m "https://
 - [알고리즘 스터디1](https://github.com/b1urrrr/Algorithm-Study)
 - [알고리즘 스터디2](https://github.com/CodeSquad-2023-BE-Study/Algorithm-Study)
 - [초심자를 위한 기술면접 가이드](https://github.com/JaeYeopHan/Interview_Question_for_Beginner)
-
-# test
-
-- 1

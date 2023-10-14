@@ -3,6 +3,7 @@ import sys
 # 형식 : combinations(객체, r). 반복 가능한 객체 (리스트/튜플/문자열)안에서 r개를 선택
 # 예 : combination(ABCD, 2) => AB, AC, AD, BC, BD, CD *순서를 고려 안 하기 때문에, AB=BA 같다고 판단함
 # 같은 물건을 중복 선택하는 것은 불가능하다고 적혀있기 때문에 사용 적합!
+# 2
 from itertools import combinations
 
 # 함수 정의

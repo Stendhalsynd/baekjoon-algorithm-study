@@ -1,5 +1,5 @@
 from itertools import combinations
-
+# 주석 수정
 def find_list(acidic, alkaline):
     min_mixture = float('inf') # 더한값 리스트, 양의 무한대
     result = (0, 0) # 두 용액 저장값

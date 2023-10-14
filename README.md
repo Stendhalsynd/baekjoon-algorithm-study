@@ -80,6 +80,7 @@ git commit -m "[BOJ] 2548_대표자연수 / 실버3 / 1분 / O(X) " -m "https://
 | -------- | ------------- | --------------------------- | -------- |
 | 1  | [js sort 특징](https://velog.io/@qmflf556/11399.-ATM)  | `정렬` | 홍지훈 |
 | 2  | [브루트 포스 (Brute Force, 완전 탐색)](https://velog.io/@jeongeunbae/Algorithms-브루트-포스-Brute-Force-완전-탐색-mllrvvmx) | `브루트 포스 (완전 탐색)` | 배정은 |
+| 3 | [python 문법 for algorithm](https://velog.io/@qmflf556/%EC%BD%94%EB%94%A9-%ED%85%8C%EC%8A%A4%ED%8A%B8%EB%A5%BC-%EC%9C%84%ED%95%9C-%ED%8C%8C%EC%9D%B4%EC%8D%AC-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%AC%B8%EB%B2%95) | `python 문법` | 홍지훈 |
 
 # 🤗 참고 레퍼런스
 

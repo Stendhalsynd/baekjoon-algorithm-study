@@ -84,6 +84,7 @@ git commit -m "[BOJ] 2548_대표자연수 / 실버3 / 1분 / O(X) " -m "https://
 | 4 | [그리디 알고리즘 및 자료형별 시간복잡도](https://velog.io/@qmflf556/%EA%B7%B8%EB%A6%AC%EB%94%94-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EC%8B%9C%EA%B0%84-%EB%B3%B5%EC%9E%A1%EB%8F%84%EB%B3%84-%EB%A9%94%EC%86%8C%EB%93%9C-%EB%B6%84%EB%A5%98) | `greedt algorithm`, `time complexity` | 홍지훈 |
 | 5 | [fork 툴을 활용한 rebase 방법](https://velog.io/@qmflf556/fork-%ED%88%B4-%EC%82%AC%EC%9A%A9%EB%B2%95) | `fork`, `rebase` | 홍지훈 |
 | 6 | [matrix 3가지 풀이 - transpose, reverse, rotate](https://velog.io/@qmflf556/algorithm-matrix-transpose-reverse-rotate) | `matrix`, `transpose`, `reverse`, `rotate` | 홍지훈 |
+| 7 | [Floyd's algorithm](https://velog.io/@qmflf556/Floyd-algorithm) | `likedlist`, `cycle` | 홍지훈 |
 
 # 🤗 참고 레퍼런스
 

@@ -85,6 +85,8 @@ git commit -m "[BOJ] 2548_대표자연수 / 실버3 / 1분 / O(X) " -m "https://
 | 5 | [fork 툴을 활용한 rebase 방법](https://velog.io/@qmflf556/fork-%ED%88%B4-%EC%82%AC%EC%9A%A9%EB%B2%95) | `fork`, `rebase` | 홍지훈 |
 | 6 | [matrix 3가지 풀이 - transpose, reverse, rotate](https://velog.io/@qmflf556/algorithm-matrix-transpose-reverse-rotate) | `matrix`, `transpose`, `reverse`, `rotate` | 홍지훈 |
 | 7 | [Floyd's algorithm](https://velog.io/@qmflf556/Floyd-algorithm) | `likedlist`, `cycle` | 홍지훈 |
+| 8 | [Linked List](https://velog.io/@qmflf556/%EC%97%B0%EA%B2%B0%EB%A6%AC%EC%8A%A4%ED%8A%B8) | `likedlist` | 홍지훈 |
+
 
 # 🤗 참고 레퍼런스
 

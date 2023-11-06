@@ -91,6 +91,9 @@ git commit -m "[BOJ] 2548_대표자연수 / 실버3 / 10분 / O(X) "
 | 8 | [Linked List](https://velog.io/@qmflf556/%EC%97%B0%EA%B2%B0%EB%A6%AC%EC%8A%A4%ED%8A%B8) | `likedlist` | 홍지훈 |
 | 9 | [비트마스킹 알고리즘](https://velog.io/@qmflf556/%EB%B9%84%ED%8A%B8%EB%A7%88%EC%8A%A4%ED%82%B9-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98) | `비트마스킹` | 홍지훈 |
 | 10 | [배열돌리기](https://velog.io/@qmflf556/16926-%EB%B0%B0%EC%97%B4-%EB%8F%8C%EB%A6%AC%EA%B8%B0) | `matrix`, `구현`, `rotate` | 홍지훈 |
+| 11 | [입력타입 정리](https://velog.io/@qmflf556/%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%9E%85%EB%A0%A5-%ED%83%80%EC%9E%85-%EC%A0%95%EB%A6%AC) | `input` | 홍지훈 |
+| 12 | [트리](https://velog.io/@qmflf556/%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8-%ED%8A%B8%EB%A6%AC) | `tree`, `traversal` | 홍지훈 |
+| 13 | [bfs & dfs](https://velog.io/@qmflf556/DFS-BFS) | `bfs`, `dfs` | 홍지훈 |
 
 
 # 🤗 참고 레퍼런스

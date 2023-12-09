@@ -2,11 +2,10 @@
 
 # 📌 스터디 규칙
 
-- 스터디는 온라인으로 2시간 진행한다. 단, 카메라를 켜고 진행한다.
-- 10분 아이스 브레이킹 및 룰렛으로 진행자 선정
-- 10분 내로 진행자가 이번 주에 정리 및 알게된 알고리즘 설명
-- 좋은 코드에 대한 분석 공유
-  - 해당 문제를 푸는 좋은 방법에 대해 공유한다.
+- 스터디는 온라인으로 1시간 진행한다. 단, 카메라를 켜고 진행한다.
+- 10분 아이스 브레이킹 및 각 스터디원별 담당 문제에 대한 풀이법 공유
+- 각 스터디원은 풀이법 공유시 이번 주에 정리 및 알게된 알고리즘이 있다면 추가적인 설명
+- 매주 달라지는 PR 파트너의 코드에 대해 코드 리뷰
 
 # 🙆‍♂️ 참여 방법
 
@@ -16,6 +15,35 @@
 4. commit 규칙을 지켜서 커밋한다.
 5. 원본 저장소로 `Pull Request` 를 한다.
 6. 다른 사람들의 PR 을 보고 자유롭게 코드리뷰를 한다. 되도록이면 다른 멤버들의 코드를 보고 하나 이상씩 피드백을 남겼으면 좋겠습니다만 의견 부탁드립니다 :)
+
+### 참여 방법 안내 - clone
+
+<details>
+
+<summary>클론 방법</summary>
+
+<img width="821" alt="스크린샷 2023-12-09 오후 9 40 55" src="https://github.com/Stendhalsynd/baekjoon-algorithm-study/assets/96957774/4aa89adf-137b-4838-bb39-36e5e07954bf">
+
+- 해당 주소를 복사후
+
+![스크린샷 2023-12-09 오후 9 42 15](https://github.com/Stendhalsynd/baekjoon-algorithm-study/assets/96957774/d8f87f6f-1a81-431a-83f5-14fdb28d771c)
+
+- 원하는 로컬 디렉토리에 클론
+
+</details>
+
+### 참여 방법 안내 - 폴더 생성 및 소스코드 업로드
+
+<details>
+
+<summary>폴더 생성</summary>
+
+![스크린샷 2023-12-09 오후 9 44 19](https://github.com/Stendhalsynd/baekjoon-algorithm-study/assets/96957774/d5fa2500-1363-4bfa-9d2d-f71c3d1868af)
+
+- 주차별 문제로 폴더를 생성하여 해당 폴더 내에 풀이 코드를 업로드한다.
+  - ex) `week9/BOJ_18352/특정 거리의 도시 찾기.py`
+
+</details>
 
 # 📁 Repository 폴더 구조
 
@@ -31,10 +59,6 @@ week@/플랫폼_문제번호/문제이름_자신이름.ts/ java ...
 | ---------------------- | ---- |
 | 백준                   | BOJ  |
 | 프로그래머스           | PSG  |
-| 리트코드               | LTC  |
-| 코드포스               | CTF  |
-| 삼성 SW Expert Academy | SEA  |
-| 그외                   | ETC  |
 
 # ✏️ commit 규칙
 
@@ -42,20 +66,155 @@ week@/플랫폼_문제번호/문제이름_자신이름.ts/ java ...
 - merge 가 아니더라도 push 후 PR을 해주셔야 다른 분들이 코드리뷰를 할 수 있습니다!
 
 ```
-git commit -m "[BOJ] 2548_대표자연수 / 실버3 / 10분 / O(X) "
+git commit -m "[BOJ] 2548_대표자연수 / 실버3 / 10분 / O "
+git commit -m "[PSG] 양궁 대회 / Lv. 2 / 110분 / X "
 ```
 
 - 코드를 커밋하는 경우가 아닐때 ( readme 수정, 이름 변경, 코드 수정, 주석 추가 및 오타 수정 등 )는 자유롭게 커밋해주세요.
 
 # 🤝 PR 규칙
 
-- [BOJ] 문제번호_문제이름 / 난이도 / 걸린 시간 / 풀이성공여부
-- `[BOJ] 20436_ZOAC3 / 실버4 / 100분 / O`
+![스크린샷 2023-12-09 오후 9 49 16](https://github.com/Stendhalsynd/baekjoon-algorithm-study/assets/96957774/a03a9e3c-6e33-49fd-b7af-f83378f0abdf)
 
-> 120 분을 넘기면 더이상 시간을 쓰지 말고 다른 분들의 풀이를 참고하시면 좋을 것 같습니다~
+위와 같은 PR 템플릿을 등록해두었습니다. 각 문제별로 풀이를 하셨다면 PR 을 요청해주세요.
+만약 해당 문제가 자신이 풀이법을 공유해야 하는 문제라면 PR 을 좀 더 자세히 작성해주세요. 이 PR 을 보며 풀이법을 공유해주시면 됩니다.
+나머지 문제의 PR 의 경우엔 비교적 간단하게 작성하셔도 상관없습니다.
+PR 같은 경우 본인이 직접 merge 해주시면 되는데 가급적이면 파트너가 코드 리뷰한 뒤에 merge 해주시면 좋아요. 단, 몇일이 걸릴지 모르니 스터디 전엔 모두 merge 해주시고 PR 보내고 하루이틀이 지나도 파트너가 코드리뷰를 달지 않으면 일단 merge 해주세요. 파트너는 자신의 파트너의 PR closed 기록에 코드리뷰를 달아주시면 됩니다.
 
-## ✅ 코드리뷰 규칙 ( Option )
+> merge 전에 한번 Fetch 를 클릭해보세요~! 만약 PR 을 요청한 내 컴시이 가장 최신 main 브랜치로부터 나온 것이 아니라면 rebase 가 필요합니다. fork 툴을 사용한 rebase 방법은 하단에 방법을 설명해두었습니다.
 
+<img width="498" alt="스크린샷 2023-12-09 오후 10 38 38" src="https://github.com/Stendhalsynd/baekjoon-algorithm-study/assets/96957774/daca4169-da6b-4c82-b5f1-8683d834b465">
+
+### PR 방법
+
+<details>
+
+<summary>풀이법을 공유할 문제의 PR</summary>
+
+![github com_Stendhalsynd_baekjoon-algorithm-study_pull_141](https://github.com/Stendhalsynd/baekjoon-algorithm-study/assets/96957774/e64c8c33-777d-4d90-ad88-211b57cf3aa1)
+
+
+- 주차별 문제로 폴더를 생성하여 해당 폴더 내에 풀이 코드를 업로드한다.
+  - ex) `week9/BOJ_18352/특정 거리의 도시 찾기.py`
+
+</details>
+
+<details>
+
+<summary>일반적인 문제들의 PR</summary>
+
+<img width="729" alt="스크린샷 2023-12-09 오후 9 52 29" src="https://github.com/Stendhalsynd/baekjoon-algorithm-study/assets/96957774/f96c7446-2b26-4b07-ac03-1c02d9b05227">
+
+- 주차별 문제로 폴더를 생성하여 해당 폴더 내에 풀이 코드를 업로드한다.
+  - ex) `week9/BOJ_18352/특정 거리의 도시 찾기.py`
+
+</details>
+
+### `fork` 프로그램을 통해 PR 및 rebase, 브랜치, 커밋 관리하기 ⭐️
+
+<details>
+
+<summary>PR 후 다음 문제를 풀때 or 다른 스터디원이 커밋 혹은 merge 했을때 - `rebase 하기`</summary>
+
+- git 명령어로 rebase 를 해주셔도 좋고 아니면 window / mac 모두 사용 가능한 GUI git 툴인 `fork` 를 사용하셔도 좋습니다. 설명은 `fork` 를 기준으로 명시해두었습니다.
+
+![스크린샷 2023-12-09 오후 10 08 13](https://github.com/Stendhalsynd/baekjoon-algorithm-study/assets/96957774/b9930eac-7130-416f-8d40-11d87a4cc3a4)
+
+![스크린샷 2023-12-09 오후 10 09 57](https://github.com/Stendhalsynd/baekjoon-algorithm-study/assets/96957774/7a98fc8d-de0c-433f-9403-145d788c90a7)
+
+#### fork 사용법 1. 좌측 메뉴바
+
+- Local Changes 는 아직 unstaged 된 변경사항, staged 된 변경사항을 확인할 수 있고 Commit subject 에 커밋할 이름, Description 에 커밋 상세내용, Amend 체크시 이전 커밋과 현재 변경점을 합쳐 새로운 커밋을 생성하지 않아도 기존 커밋에 새로 staged 에 올린 변경점을 반영할 수 있습니다.
+
+![스크린샷 2023-12-09 오후 10 14 08](https://github.com/Stendhalsynd/baekjoon-algorithm-study/assets/96957774/9f07eac9-2ad8-463c-b00a-b47211b4eb44)
+
+![스크린샷 2023-12-09 오후 10 24 42](https://github.com/Stendhalsynd/baekjoon-algorithm-study/assets/96957774/c8eb8ba8-5af3-4e8f-bf77-e75e5a94dd3e)
+
+이렇게 Staged 된 변경점이 있으면 해당 파일을 커밋할 수 있게 됩니다.
+
+- All Commits 는 모든 커밋 기록을 볼 수 있습니다. 상단에 Fetch 를 클릭하면 새로고침이 되어서 스터디원들중 코드를 merge 했는지 내 커밋이 어떤 상황인지 한눈에 파악할 수 있어요.
+
+![스크린샷 2023-12-09 오후 10 17 32](https://github.com/Stendhalsynd/baekjoon-algorithm-study/assets/96957774/b3b5cbc5-dab5-40a2-a808-abd547a7179b)
+
+![스크린샷 2023-12-09 오후 10 18 32](https://github.com/Stendhalsynd/baekjoon-algorithm-study/assets/96957774/0f52d9ec-ea20-45c6-b99e-711d885a2a8d)
+
+#### fork 사용법 2. 브랜치 생성
+
+![스크린샷 2023-12-09 오후 10 20 03](https://github.com/Stendhalsynd/baekjoon-algorithm-study/assets/96957774/fc050b2c-05c0-4cb5-8417-73c042f15423)
+
+마우스 우클릭 하시면 New Branch 를 클릭하여 브랜치를 생성할 수 있습니다.
+
+저 주황색 박스가 로컬 브랜치이며 상단에 Push 를 해주시면 원격 저장소에 push 가 되어 왼쪽에 깃허브 아이콘이 나타납니다. 
+
+초록생 박스가 원격 저장소를 나타냅니다.
+
+#### fork 사용법 3. 체크아웃 방법
+
+![스크린샷 2023-12-09 오후 10 22 39](https://github.com/Stendhalsynd/baekjoon-algorithm-study/assets/96957774/37ab83e3-3d02-42ab-9285-fd61ad9f036f)
+
+![스크린샷 2023-12-09 오후 10 22 52](https://github.com/Stendhalsynd/baekjoon-algorithm-study/assets/96957774/d7c7304b-da8d-4e86-9c2e-234782d98820)
+
+로컬브랜치가 있거나 아니면 원격 저장소만 있는 곳에 좌클릭으로 더블클릭해주면 주황색 박스 영역에 체크 표시가 뜨게 됩니다. 그러면 해당 브랜치에 체크아웃이 되어있다는 의미입니다.
+
+#### fork 사용법 4. 응용
+
+![스크린샷 2023-12-09 오후 10 25 37](https://github.com/Stendhalsynd/baekjoon-algorithm-study/assets/96957774/374c8ed7-7737-4632-b1f6-1d844906b18d)
+
+현재 어떤 문제를 풀었고 push 하여 PR 을 요청한 상태입니다.
+다음 문제를 풀려면 어떻게 해야할까요?
+커밋을 하게된 시점에 새로 branch 를 생성하여 다음 문제를 풀기 시작해주세요.
+
+![스크린샷 2023-12-09 오후 10 27 55](https://github.com/Stendhalsynd/baekjoon-algorithm-study/assets/96957774/c235f6d3-7421-43df-af56-c89e3e9f5c03)
+
+![스크린샷 2023-12-09 오후 10 28 08](https://github.com/Stendhalsynd/baekjoon-algorithm-study/assets/96957774/ad03383c-79b1-409f-913f-fc486ac047e3)
+
+![스크린샷 2023-12-09 오후 10 28 23](https://github.com/Stendhalsynd/baekjoon-algorithm-study/assets/96957774/fb828368-1341-442f-beff-9b684f453c0e)
+
+브랜치는 해당 경로를 통해 삭제해줄 수 있습니다.
+
+![스크린샷 2023-12-09 오후 10 28 48](https://github.com/Stendhalsynd/baekjoon-algorithm-study/assets/96957774/7085f11d-1506-40a5-8c98-9d170936029e)
+
+이번엔 내가 몇일 전에 PR 을 요청했는데 다른 스터디원들이 커밋을 했거나 merge 가 된 상황입니다. 이때는 바로 merge 를 하는 것이 아니고 `rebase` 를 해주세요. `rebase` 는 내 base 를 가장 최근 `main` 브랜치 위로 이동시켜줄 수 있도록 합니다. 
+
+![스크린샷 2023-12-09 오후 10 30 06](https://github.com/Stendhalsynd/baekjoon-algorithm-study/assets/96957774/fcc1ba05-985b-4533-b5c1-f415deb5dae1)
+
+먼저 rebase 하고싶은 내 커밋의 로컬 브랜치에 더블클릭하여 체크아웃해줍니다.
+
+![스크린샷 2023-12-09 오후 10 31 42](https://github.com/Stendhalsynd/baekjoon-algorithm-study/assets/96957774/86efc24f-6708-498a-8e5b-eca4bdc113ca)
+
+그리고 rebase 를 하고 싶은 목적지에 우클릭을 하면 interactively rebase ... 라는 것을 클릭합니다.
+
+![스크린샷 2023-12-09 오후 10 32 22](https://github.com/Stendhalsynd/baekjoon-algorithm-study/assets/96957774/9743f438-4f0b-43b2-89f1-b95be209ea4f)
+
+rebase 는 로컬 브랜치만 이동시킵니다. 따라서 초록색 영역의 원격 브랜치도 내 로컬 브랜치에 따라오도록 하려면 상단의 push 를 해줘야 합니다.
+
+![스크린샷 2023-12-09 오후 10 34 31](https://github.com/Stendhalsynd/baekjoon-algorithm-study/assets/96957774/469c48f0-d3fb-44b1-b5e4-b73df0c0cf56)
+
+아마 변경점이 있는데 저 Force push 체크를 하지 않으면 오류가 뜰 수도 있어요.
+
+![스크린샷 2023-12-09 오후 10 34 50](https://github.com/Stendhalsynd/baekjoon-algorithm-study/assets/96957774/e633428c-5776-43a0-8586-ec0931edfb01)
+
+그러면 아래와 같이 커밋을 깔끔하게 rebase 해줄 수 있습니다. 이 상태에서 merge 를 해주시면 됩니다.
+
+![스크린샷 2023-12-09 오후 10 35 36](https://github.com/Stendhalsynd/baekjoon-algorithm-study/assets/96957774/a524cd7c-3bf1-4cd9-8807-8acc41eb7770)
+
+squash 는 다음과 같은 상황에 사용합니다.
+
+<img width="529" alt="스크린샷 2023-12-09 오후 10 39 35" src="https://github.com/Stendhalsynd/baekjoon-algorithm-study/assets/96957774/98fa81cf-65af-45de-9e69-1b49cf24b754">
+
+불필요하게 커밋이 두번 나온 상황입니다. 이걸 하나로 합쳐줄때 squash 를 사용합니다.
+
+합치고 싶은 커밋에 우클릭을 하면 아래와 같이 squash 를 할 수 있습니다.
+
+<img width="651" alt="스크린샷 2023-12-09 오후 10 40 08" src="https://github.com/Stendhalsynd/baekjoon-algorithm-study/assets/96957774/4b7c60de-e0c8-4ffb-96af-ecb0b65e8967">
+
+<img width="937" alt="스크린샷 2023-12-09 오후 10 40 54" src="https://github.com/Stendhalsynd/baekjoon-algorithm-study/assets/96957774/4c7b5372-300e-4259-8994-3d69c746fd9d">
+
+</details>
+
+### ✅ 코드리뷰 규칙 
+
+- 매주 사다리타기로 각 멤버별 파트너를 선정합니다. 그 주엔 해당 파트너의 PR 만큼은 꼭 코드리뷰할 수 있도록 노력해주세요~!!
 - PR 에서 코드 리뷰를 한다.
 - 전체 코드 흐름 파악한 뒤, 이 분이 어떻게 풀었을까 이해한 후 의견 제시
   - 잘했다고 생각하는 부분
@@ -64,6 +223,30 @@ git commit -m "[BOJ] 2548_대표자연수 / 실버3 / 10분 / O(X) "
   - 또 다른 풀이 방법 제시
 - 코드 일부분에 코드 리뷰를 해도 되고 전체 코드 및 or PR 밑에 코멘트 작성으로 리뷰를 해도 됩니다.
 
+`파트너체계`
+
+<img width="888" alt="스크린샷 2023-12-09 오후 10 04 50" src="https://github.com/Stendhalsynd/baekjoon-algorithm-study/assets/96957774/d87fba58-7d59-4fe0-bd11-c93d00be70bd">
+
+
+# 😀 브랜치 생성
+
+- 문제별로 브랜치를 만들어 각 문제별 PR 을 요청해주세요.
+- ex) 플랫폼_문제이름(문제번호)_본인이름 -> BOJ_10164_홍지훈 / PSG_양궁대회_홍지훈
+- 백준은 중간에 문제번호를, PSG 는 문제번호가 없으니 문제이름을 붙여주세요.
+
+<details>
+
+<summary>브랜치 관리</summary>
+
+<img width="393" alt="스크린샷 2023-12-09 오후 9 55 24" src="https://github.com/Stendhalsynd/baekjoon-algorithm-study/assets/96957774/d5b54848-43d5-4abb-bb1b-72e9aa17142c">
+<img width="162" alt="스크린샷 2023-12-09 오후 9 57 03" src="https://github.com/Stendhalsynd/baekjoon-algorithm-study/assets/96957774/b62fb5ea-a5f2-428e-963e-2dd7c432543d">
+
+
+> 브랜치명으로 `PSG_양궁대회_홍지훈` 를 생성한 모습. 
+
+
+</details>
+
 # ⭐️ 백준 알고리즘 스터디 1기 멤버 
 >  `2023.10.09 ~ 2023.12.03` 
 
@@ -71,7 +254,14 @@ git commit -m "[BOJ] 2548_대표자연수 / 실버3 / 10분 / O(X) "
 | --- | --- | --- | --- | --- | --- |
 | 조재은 | 배정은 | 홍지훈 | 은홍 | 이동혁 | 양승혜 |
 
-# 📅 일정표 ( 매주 7문제 )
+# 📅 2기 일정표 ( 매주 7문제 )
+
+|                     | 1                                                   | 2                                            | 3                                                        | 4                                                     | 5                                                   | 6                                                 | 7                                                   |
+| ------------------- | --------------------------------------------------- | -------------------------------------------- | -------------------------------------------------------- | ----------------------------------------------------- | --------------------------------------------------- | ------------------------------------------------- | --------------------------------------------------- |
+| 1주차 (12.11~12.17)  | [대표 자연수](https://www.acmicpc.net/problem/2548) | [ATM](https://www.acmicpc.net/problem/11399) | [블랙 프라이데이](https://www.acmicpc.net/problem/18114) | [단어 나누기](https://www.acmicpc.net/problem/1251)   | [회의실 배정](https://www.acmicpc.net/problem/1931) | [두 용액](https://www.acmicpc.net/problem/2470)   | [수리공 항승](https://www.acmicpc.net/problem/1449) |
+
+
+# 📅 1기 일정표 ( 매주 7문제 )
 
 |                     | 1                                                   | 2                                            | 3                                                        | 4                                                     | 5                                                   | 6                                                 | 7                                                   |
 | ------------------- | --------------------------------------------------- | -------------------------------------------- | -------------------------------------------------------- | ----------------------------------------------------- | --------------------------------------------------- | ------------------------------------------------- | --------------------------------------------------- |

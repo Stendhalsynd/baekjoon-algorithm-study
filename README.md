@@ -64,7 +64,12 @@ git commit -m "[BOJ] 2548_대표자연수 / 실버3 / 10분 / O(X) "
   - 또 다른 풀이 방법 제시
 - 코드 일부분에 코드 리뷰를 해도 되고 전체 코드 및 or PR 밑에 코멘트 작성으로 리뷰를 해도 됩니다.
 
-# ⭐️ 멤버
+# ⭐️ 백준 알고리즘 스터디 1기 멤버 
+>  `2023.10.09 ~ 2023.12.03` 
+
+| <a href="https://github.com/jojaegu2"><img src="https://avatars.githubusercontent.com/u/65579171?v=4" width="150px"/></a> | <a href="https://github.com/JeongEunBae"><img src="https://avatars.githubusercontent.com/u/59482764?v=4" width="150px"/></a> | <a href="https://github.com/Stendhalsynd"><img src="https://velog.velcdn.com/images/qmflf556/post/19704a5b-0640-4675-b149-abb432c38cd2/image.png" width="150px"/></a> | <a href="https://github.com/96Hong2"><img src="https://avatars.githubusercontent.com/u/62095603?v=4" width="150px"/></a> | <a href="https://avatars.githubusercontent.com/u/62095603?v=4"><img src="https://avatars.githubusercontent.com/u/96766683?v=4" width="150px"/></a> | <a href="https://github.com/vichye-1"><img src="https://avatars.githubusercontent.com/u/66904886?v=4" width="150px"/></a> |
+| --- | --- | --- | --- | --- | --- |
+| 조재은 | 배정은 | 홍지훈 | 은홍 | 이동혁 | 양승혜 |
 
 # 📅 일정표 ( 매주 7문제 )
 

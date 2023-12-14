@@ -20,39 +20,22 @@ if (N >= K) {
 
   const getCount = (num, length) => {
     let count = 0;
-    let compare = (2 ** (length));
-    let prefix = 2;
 
-    while (compare <= num) {
-      if (num & compare) {
-        count += prefix;
-        num -= compare;
-      }
-
-      prefix <<= 1;
-      compare <<= 1;
-    }
-
-    compare = (2 ** (length - 1));
-
-    while (num & compare) {
-      count += 1;
-      num -= compare;
-    }
+    const prefix = num >> (length - 1);
+    count += prefix;
+    num -= (prefix << (length - 1));
 
     while (num) {
       while (!(num & 1)) {
         num >>= 1;
       }
 
-      if (num) {
-        if ((num & 2)) {
-          num += 1;
-        } else {
-          num -= 1;
-        }
-        count += 1;
+      if ((num & 2)) {
+        num += 1;
+      } else {
+        num -= 1;
       }
+      count += 1;
     }
 
     return count;

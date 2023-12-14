@@ -22,8 +22,10 @@ if (N >= K) {
     let count = 0;
 
     const prefix = num >> (length - 1);
+
     count += prefix;
-    num -= (prefix << (length - 1));
+
+    num ^= (prefix << (length - 1));
 
     while (num) {
       while (!(num & 1)) {
@@ -32,9 +34,9 @@ if (N >= K) {
 
       if ((num & 2)) {
         num += 1;
-      } else {
-        num -= 1;
       }
+
+      num >>= 2;
       count += 1;
     }
 

@@ -294,6 +294,8 @@ squash 는 다음과 같은 상황에 사용합니다.
 | 11 | [입력타입 정리](https://velog.io/@qmflf556/%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%9E%85%EB%A0%A5-%ED%83%80%EC%9E%85-%EC%A0%95%EB%A6%AC) | `input` | 홍지훈 |
 | 12 | [트리](https://velog.io/@qmflf556/%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8-%ED%8A%B8%EB%A6%AC) | `tree`, `traversal` | 홍지훈 |
 | 13 | [bfs & dfs](https://velog.io/@qmflf556/DFS-BFS) | `bfs`, `dfs` | 홍지훈 |
+| 14 | [최단경로](https://velog.io/@qmflf556/%EC%B5%9C%EB%8B%A8-%EA%B2%BD%EB%A1%9C-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98) | `다익스트라`, `플로이드 워셜` | 홍지훈 |
+| 15 | [우선순위 큐](https://velog.io/@qmflf556/%EC%9A%B0%EC%84%A0%EC%88%9C%EC%9C%84-%ED%81%90) | `우선순위큐` | 홍지훈 |
 
 
 # 🤗 참고 레퍼런스

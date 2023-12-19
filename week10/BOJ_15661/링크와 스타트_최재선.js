@@ -1,3 +1,4 @@
+/* eslint-disable prefer-const */
 /* eslint-disable no-bitwise */
 const fs = require('fs');
 
@@ -29,8 +30,8 @@ const getDiff = (num) => {
   let [sum1, sum2] = [0, 0];
 
   for (let i = 0; i < keys.length; i += 1) {
-    if (num & keys[i]) sum1 += values[i];
-    if (~num & keys[i]) sum2 += values[i];
+    if ((num & keys[i]) === keys[i]) sum1 += values[i];
+    else if ((~num & keys[i]) === keys[i]) sum2 += values[i];
   }
 
   return Math.abs(sum1 - sum2);

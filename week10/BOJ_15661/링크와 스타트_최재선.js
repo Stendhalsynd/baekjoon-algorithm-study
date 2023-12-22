@@ -1,40 +1,31 @@
-/* eslint-disable prefer-const */
-/* eslint-disable no-bitwise */
 const fs = require('fs');
-
-const [rawN, ...rawS] = fs.readFileSync(
-  process.env.LOGNAME === 'jake' ? './input.txt' : '/dev/stdin',
-).toString().trim().split('\n');
+const [rawN, ...rawS] = fs.readFileSync('/dev/stdin').toString().trim().split('\n');
 
 const N = Number(rawN);
 const S = rawS.map((el) => el.split(' ').map(Number));
 
-const keys = [];
-const values = [];
+const keyValues = [];
 
 for (let i = 0; i < N; i += 1) {
   for (let j = i + 1; j < N; j += 1) {
-    const key = (1 << i) + (1 << j);
-    const value = S[i][j] + S[j][i];
-
-    keys.push(key);
-    values.push(value);
+    keyValues.push((1 << i) | (1 << j), S[i][j] + S[j][i]);
   }
 }
 
 const first = 1 << (N - 1);
-let min = Infinity;
+let min = 38000;
 let start = (1 << N) - 1;
 
 const getDiff = (num) => {
-  let [sum1, sum2] = [0, 0];
+  let diff = 0;
 
-  for (let i = 0; i < keys.length; i += 1) {
-    if ((num & keys[i]) === keys[i]) sum1 += values[i];
-    else if ((~num & keys[i]) === keys[i]) sum2 += values[i];
+  for (let i = 0; i < keyValues.length; i += 2) {
+    const flag = num & keyValues[i];
+    if (flag === keyValues[i]) diff += keyValues[i + 1];
+    else if (!flag) diff -= keyValues[i + 1];
   }
 
-  return Math.abs(sum1 - sum2);
+  return Math.abs(diff);
 };
 
 while ((start & first) && min) {

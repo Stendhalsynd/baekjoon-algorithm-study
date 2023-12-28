@@ -1,44 +1,33 @@
+/* eslint-disable no-bitwise */
 const fs = require('fs');
 
-const [_rawN, ...rawInfos] = fs.readFileSync(
+const [rawN, ...rawInfos] = fs.readFileSync(
   process.env.LOGNAME === 'jake' ? './input.txt' : '/dev/stdin',
 ).toString().trim().split('\n');
 
+const N = Number(rawN);
 const infos = rawInfos.map((el) => el.split(' ').map(Number));
-const bucket = new Set();
 
-const getSplit = (num) => [
-  Math.floor(num / 100),
-  Math.floor((num % 100) / 10),
-  num % 10,
-];
+let cur = (1 << N) - 1;
+let min = Infinity;
 
-for (let i = 100; i < 1000; i += 1) {
-  const [h, t, o] = getSplit(i);
+while (cur) {
+  let [index, multiply, plus] = [0, 1, 0];
+  let copyCur = cur;
 
-  if (h && t && o && (h !== t) && (h !== o) && (t !== o)) {
-    bucket.add(i);
+  while (copyCur) {
+    if (copyCur & 1) {
+      multiply *= infos[index][0];
+      plus += infos[index][1];
+    }
+
+    copyCur >>= 1;
+    index += 1;
   }
+
+  min = Math.min(min, Math.abs(multiply - plus));
+
+  cur -= 1;
 }
 
-for (const [num, sCount, bCount] of infos) {
-  const [nh, nt, no] = getSplit(num);
-
-  for (const el of bucket) {
-    let [es, eb] = [0, 0];
-    const [eh, et, eo] = getSplit(el);
-
-    if (eh === nh) es += 1;
-    else if (eh === nt || eh === no) eb += 1;
-
-    if (et === nt) es += 1;
-    else if (et === nh || et === no) eb += 1;
-
-    if (eo === no) es += 1;
-    else if (eo === nh || eo === nt) eb += 1;
-
-    if (sCount !== es || bCount !== eb) bucket.delete(el);
-  }
-}
-
-console.log(bucket.size);
+console.log(min);

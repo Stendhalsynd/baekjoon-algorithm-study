@@ -42,7 +42,8 @@ for _ in range(N): # 시간복잡도: O(N)
     
     # 스트라이크 or 볼의 개수가 맞지 않으면 리스트에서 제거
     if strike_count != strike or ball_count != ball:
-      numbers.remove(numbers[i])
+      numbers.remove(numbers[i]) # O(N) -> 결과적으로, 전체 시간복잡도 O(n^2 * 9P3)
+      # hash 자료형(dictionary)을 사용해서 del한다면, O(1)로 나타낼 수 있다.
       removed += 1
 
 print(len(numbers))

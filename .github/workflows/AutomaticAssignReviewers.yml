@@ -1,0 +1,15 @@
+name: Review Assign
+
+on:
+  pull_request:
+    types: [opened, ready_for_review]
+
+jobs:
+  assign:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: hkusu/review-assign-action@v1
+        with:
+          assignees: ${{ github.actor }} # assign pull request author
+          reviewers: vichye-1, Stendhalsynd, 10o0o, itmakesmesoft, dawncoding # if draft, assigned when draft is released
+          max-num-of-reviewers: 1 # 이 수치가 명시되면 지정된 숫자보다 적은 수의 리뷰어가 랜덤으로 선택되어 무작위로 할당하는데 유용하다.

@@ -18,5 +18,5 @@ while bridge:
             bridge.append(trucks.pop(0))
         else:
             bridge.append(0)
-    
+
 print(time)

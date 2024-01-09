@@ -63,10 +63,6 @@ const move = (i, j, direction) => {
 
 move(0, 0, '+j');
 
-while (!oneDimensionMatrix[oneDimensionMatrix.length - 1]) {
-  oneDimensionMatrix.pop();
-}
-
 const directionIndexMap = new Array(5);
 directionIndexMap[1] = [0, 7];
 directionIndexMap[2] = [0, 3];

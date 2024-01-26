@@ -81,7 +81,7 @@ git commit -m "[PSG] 양궁 대회 / Lv. 2 / 110분 / X "
 나머지 문제의 PR 의 경우엔 비교적 간단하게 작성하셔도 상관없습니다.
 PR 같은 경우 본인이 직접 merge 해주시면 되는데 가급적이면 파트너가 코드 리뷰한 뒤에 merge 해주시면 좋아요. 단, 몇일이 걸릴지 모르니 스터디 전엔 모두 merge 해주시고 PR 보내고 하루이틀이 지나도 파트너가 코드리뷰를 달지 않으면 일단 merge 해주세요. 파트너는 자신의 파트너의 PR closed 기록에 코드리뷰를 달아주시면 됩니다.
 
-> merge 전에 한번 Fetch 를 클릭해보세요~! 만약 PR 을 요청한 내 컴시이 가장 최신 main 브랜치로부터 나온 것이 아니라면 rebase 가 필요합니다. fork 툴을 사용한 rebase 방법은 하단에 방법을 설명해두었습니다.
+> merge 전에 한번 Fetch 를 클릭해보세요~! 만약 PR 을 요청한 내 커밋이 가장 최신 main 브랜치로부터 나온 것이 아니라면 rebase 가 필요합니다. fork 툴을 사용한 rebase 방법은 하단에 방법을 설명해두었습니다.
 > merge 된 원격 브랜치는 삭제해주세요~ 인원이 많다보니 원격 브랜치가 많아지면 복잡해집니다..
 
 <img width="498" alt="스크린샷 2023-12-09 오후 10 38 38" src="https://github.com/Stendhalsynd/baekjoon-algorithm-study/assets/96957774/daca4169-da6b-4c82-b5f1-8683d834b465">

@@ -25,8 +25,6 @@ let result = 0;
 const isValidPos = (i, j) => i < n && i >= 0 && j < m && j >= 0;
 
 const processPoses = (existQueue, newQueue) => {
-  let flag = false;
-
   for (const [i, j] of existQueue) {
     for (const di of dif) {
       for (const dj of dif) {
@@ -36,22 +34,19 @@ const processPoses = (existQueue, newQueue) => {
           states[mi][mj] -= 1;
 
           if (!states[mi][mj]) {
-            flag = true;
             newQueue.push([mi, mj]);
           }
         }
       }
     }
   }
-
-  return flag;
 };
 
-while (queue.length) {
+while (1) {
   const newQueue = [];
-  const flag = processPoses(queue, newQueue);
+  processPoses(queue, newQueue);
 
-  if (!flag) break;
+  if (!newQueue.length) break;
   queue = newQueue;
   result += 1;
 }

@@ -27,11 +27,12 @@ while (curTime < flag2 && curTime < t && poses.length) {
 
       if (isValidPos(mi, mj) && !visited[mi][mj]) {
         visited[mi][mj] = 1;
-        newPoses.push([mi, mj]);
 
         if (matrix[mi][mj] === 2) {
           const calculatedTime = curTime + n - 1 - mi + m - 1 - mj;
           flag2 = calculatedTime;
+        } else {
+          newPoses.push([mi, mj]);
         }
       }
     }

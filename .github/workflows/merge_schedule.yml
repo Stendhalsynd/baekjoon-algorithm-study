@@ -8,17 +8,17 @@ on:
       - synchronize
   schedule:
     # https://crontab.guru/every-hour
-    - cron: "18 19 * * 0"
+    - cron: "40 19 * * 0"
 
 jobs:
   merge_schedule:
     runs-on: ubuntu-latest
     steps:
-      - uses: gr2m/merge-schedule-action@v2
+      - uses: gr2m/merge-schedule-action@v2.4.3
         with:
           # Merge method to use. Possible values are merge, squash or
           # rebase. Default is merge.
-          merge_method: rebase
+          merge_method: merge
           # Time zone to use. Default is UTC.
           time_zone: "Asia/Seoul"
           # Require all pull request statuses to be successful before

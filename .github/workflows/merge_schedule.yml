@@ -8,7 +8,7 @@ on:
       - synchronize
   schedule:
     # https://crontab.guru/every-hour
-    - cron: "15 19 * * 0"
+    - cron: "18 19 * * 0"
 
 jobs:
   merge_schedule:
@@ -20,7 +20,7 @@ jobs:
           # rebase. Default is merge.
           merge_method: rebase
           # Time zone to use. Default is UTC.
-          time_zone: "America/Los_Angeles"
+          time_zone: "Asia/Seoul"
           # Require all pull request statuses to be successful before
           # merging. Default is `false`.
           require_statuses_success: "false"

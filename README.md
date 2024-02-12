@@ -7,6 +7,129 @@
 - 각 스터디원은 풀이법 공유시 이번 주에 정리 및 알게된 알고리즘이 있다면 추가적인 설명
 - 매주 달라지는 PR 파트너의 코드에 대해 코드 리뷰
 
+# 📁 3기 Repository 폴더 구조
+
+> week17/BOJ_20300/섬의 개수_홍지훈.py
+
+기존 1~2기와 폴더 구조 및 파일명 규칙이 동일합니다. 단, 매번 폴더 및 파일을 생성하는 과정이 귀찮았던 부분을 자동화하는 파일을 생성했습니다.
+
+해당 자동화 파일은 scripts/create.sh 파일을 말하며 하단에 사용법을 정리해두었습니다.
+
+# 😀 3기 브랜치 생성
+
+## 파일 및 폴더 생성 - create.sh
+
+alias 를 설정해두어서 아래와 같은 명령어를 입력시, 이번주차에 본인에게 해당하는 모든 폴더 및 파일을 생성해줍니다.
+
+```
+create {본인이름} {확장자} // 만약 파이썬을 사용한다면 확장자를 붙이지 않아도 상관없고 그 외의 언어를 사용시 js / cpp 등을 붙여주세요.
+ex) create 홍지훈
+create 홍지훈 cpp
+create 홍지훈 js
+```
+
+만약 alias 가 먹히지 않았다면 프로젝트 루트 디렉토리에서 ./scripts/create.sh {본인이름} {확장자} 를 해주시면 됩니다.
+
+```
+ex) ./scripts/create.sh 홍지훈
+```
+
+위의 명령어 실행시 결과 👉
+
+`확장자명 입력하지 않을 경우`
+
+![Feb-12-2024 21-31-37](https://github.com/Stendhalsynd/baekjoon-algorithm-study/assets/96957774/b6cd5189-6b74-4559-8ca8-fa1981394e74)
+
+`확장자명 입력할 경우`
+
+![확장자](https://github.com/Stendhalsynd/baekjoon-algorithm-study/assets/96957774/e65487d9-67a5-4a5b-9651-bfc64a9e6d69)
+
+> 단, alias 는 루트 디렉토리에서만 동작합니다.
+
+## 브랜치
+
+`기존 브랜치명`
+
+```
+BOJ_2546_홍지훈
+```
+
+`신규 브랜치명`
+
+```
+문제이름_홍지훈
+```
+
+> 브랜치명을 조금이라도 짧게 줄이고자 문제이름_본인이름 형식으로 바꿀 것을 건의합니다.
+
+# 🤝 3기 PR 규칙
+
+## PR 커밋메세지 단축
+
+PR 메세지가 좀 길고 반복적으로 나오는 부분이 있어 짧게 줄이는 것을 건의합니다.
+
+`기존방식`
+
+```
+[BOJ] 17836_공주님을 구해라! / 골드5 / 115분 / X
+```
+
+`신규방식`
+
+```
+골드5 / 115분 / X
+```
+
+플랫폼, 문제번호, 문제이름 등은 폴더명 및 파일명에 드러나는 부분이니 이를 생략하고 `문제난이도` / `걸린시간` / `소요시간` 만 커밋메세지에 반영해보는 것을 건의합니다.
+
+단, 이는 커밋메세지의 규칙이며 PR 요청시 TITLE 은 문제번호 및 문제이름이 없으면 혼란스러울 것 같아 기존 방식을 유지해보면 좋을 것 같습니다.
+
+<img width="773" alt="스크린샷 2024-02-12 오후 9 25 21" src="https://github.com/Stendhalsynd/baekjoon-algorithm-study/assets/96957774/b9605bc7-cd8b-4096-8682-39855edfb425">
+
++) 추가로 풀지 못했던 기존의 코드도 지우지 말고 같이 PR 로 올려주시면 좋을 것 같습니다. 
+
+## PR 템플릿 변경
+
+`기존 템플릿`
+
+```md
+### 📖 풀이한 문제
+
+- 백준 {문제번호}-{문제이름}
+
+### ⭐️ 문제에서 주로 사용한 알고리즘
+
+### 대략적인 코드 설명
+```
+
+`신규 템플릿`
+
+```md
+### ⭐️ 문제에서 주로 사용한 알고리즘
+
+### 대략적인 코드 설명
+
+### 코드리뷰시 요청사항
+```
+
+> 문제 번호 및 문제이름은 PR TITLE 에 나타나 있으니 생략합니다.
+> 코드리뷰 대상자가 랜덤으로 생성되니 해당 리뷰어에게 리뷰를 요청했으면 좋을 것 같은 사항을 PR 에 기입합니다. 이때 코드도 같이 적으면 코드리뷰시 더 용이할 것 같습니다.
+
+# 3기에서의 변경점 정리
+
+1. 폴더 구조 동일. 단, 자동화 script 추가로 create {본인이름} {확장자} 형식의 명령어를 통해 이번주차에 생성해야 하는 모든 폴더 및 파일 생성가능
+2. 커밋 메세지 간소화. -> 커밋 메세지엔 `문제난이도` / `걸린시간` / `소요시간` 만 입력
+3. PR TITLE 기존 방식 유지. -> 짧게 줄일 경우 혼란스러울 것을 방지
+4. PR 템플릿 변경
+
+---
+
+# 기존 1~2 기 규칙들
+
+<details>
+
+<summary>기존 규칙들</summary>
+
 # 🙆‍♂️ 참여 방법
 
 1. 이 저장소를 `clone` 한다.
@@ -245,7 +368,9 @@ squash 는 다음과 같은 상황에 사용합니다.
 <img width="162" alt="스크린샷 2023-12-09 오후 9 57 03" src="https://github.com/Stendhalsynd/baekjoon-algorithm-study/assets/96957774/b62fb5ea-a5f2-428e-963e-2dd7c432543d">
 
 
-> 브랜치명으로 `PSG_양궁대회_홍지훈` 를 생성한 모습. 
+> 브랜치명으로 `PSG_양궁대회_홍지훈` 를 생성한 모습.
+
+</details>
 
 
 </details>
@@ -256,6 +381,12 @@ squash 는 다음과 같은 상황에 사용합니다.
 | <a href="https://github.com/jojaegu2"><img src="https://avatars.githubusercontent.com/u/65579171?v=4" width="150px"/></a> | <a href="https://github.com/JeongEunBae"><img src="https://avatars.githubusercontent.com/u/59482764?v=4" width="150px"/></a> | <a href="https://github.com/Stendhalsynd"><img src="https://velog.velcdn.com/images/qmflf556/post/19704a5b-0640-4675-b149-abb432c38cd2/image.png" width="150px"/></a> | <a href="https://github.com/96Hong2"><img src="https://avatars.githubusercontent.com/u/62095603?v=4" width="150px"/></a> | <a href="https://avatars.githubusercontent.com/u/62095603?v=4"><img src="https://avatars.githubusercontent.com/u/96766683?v=4" width="150px"/></a> | <a href="https://github.com/vichye-1"><img src="https://avatars.githubusercontent.com/u/66904886?v=4" width="150px"/></a> |
 | --- | --- | --- | --- | --- | --- |
 | 조재은 | 배정은 | 홍지훈 | 은홍 | 이동혁 | 양승혜 |
+
+# 📅 3기 일정표 ( 매주 7문제 )
+
+|                     | 1                                                   | 2                                            | 3                                                        | 4                                                     | 5                                                   | 6                                                 | 7                                                   |
+| ------------------- | --------------------------------------------------- | -------------------------------------------- | -------------------------------------------------------- | ----------------------------------------------------- | --------------------------------------------------- | ------------------------------------------------- | --------------------------------------------------- |
+| 17주차 (2.13~2.18)  | [로프](https://www.acmicpc.net/problem/2217) | [주유소](https://www.acmicpc.net/problem/13305) | [뒤집기 2](https://www.acmicpc.net/problem/1455) | [강의실 배정](https://www.acmicpc.net/problem/11000) | [우체국](https://www.acmicpc.net/problem/2141) | [택배](https://www.acmicpc.net/problem/8980) | [생략](생략) |
 
 # 📅 2기 일정표 ( 매주 7문제 )
 

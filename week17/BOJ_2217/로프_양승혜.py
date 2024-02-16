@@ -4,7 +4,7 @@ nums = []
 for _ in range(n):
     nums.append(int(input()))
 
-nums.sort(reverse = True) # 굳이 내림차순으로 정렬하지 않아도 되긴 함
+nums.sort(reverse = True)
 
 answer = []
 for num in nums:

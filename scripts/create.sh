@@ -23,10 +23,26 @@ expansion="$2"  # 두 번째 인자로 받은 확장자
 IFS=$'\n' read -d '' -r -a lines < "$file"
 
 # 배열 순회하여 각 줄 출력
-for link in "${lines[@]}"; do
+total_boj=${#lines[@]}
+length=$((total_boj - 1))
+
+for (( i=0; i<${#lines[@]}; i++ )); do
+  link="${lines[$i]}"
+  
+  # TODO: 19주차부터 지울 부분
   problem_number=$(echo $link | cut -d '/' -f5 )
   problem_title=$(python $script_dir/crawling.py $problem_number)
   problem_folder="${week_folder}/BOJ_${problem_number}"
+
+  # TODO: 19주차부터 PSG 에 적용
+  # if [[ $i < $length ]]; then
+  #   problem_number=$(echo $link | cut -d '/' -f5 )
+  #   problem_title=$(python $script_dir/crawling.py $problem_number)
+  #   problem_folder="${week_folder}/BOJ_${problem_number}"
+  # else
+  #   problem_title=$(python ./scripts/crawling_psg.py $link)
+  #   problem_folder="${week_folder}/PSG_${problem_title}"
+  # fi
 
   mkdir -p "$problem_folder"
 

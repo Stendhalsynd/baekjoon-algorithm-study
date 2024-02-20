@@ -1,13 +1,5 @@
 #!/bin/bash
 
-# 문지영 송성우 양승혜 이서연 주지찬 최재선 홍지훈
-
-# 사용법 확인
-if [ $# -lt 1 ]; then
-    echo "사용법: $0 <주차> [빠진인원...]"
-    exit 1
-fi
-
 # 변수 설정
 exclude_members=("$@")
 all_members=("문지영" "송성우" "양승혜" "이서연" "주지찬" "최재선" "홍지훈")
@@ -50,6 +42,21 @@ for link in "${lines[@]}"; do
   problem_number=$(echo $link | cut -d '/' -f5 )
   problem_title=$(python $script_dir/crawling.py $problem_number)
   problems+=("${problem_number}_${problem_title}")
+done
+
+# exclude_members가 비어있는 경우
+if [[ -z "$exclude_members" ]]; then
+  # 랜덤 숫자로 선택된 문제 추가
+  random_problem_index=$((RANDOM % 7))
+  problems+=("${problems[$random_problem_index]}")
+fi
+
+# Fisher-Yates 알고리즘 -> 인원 랜덤 섞기
+for i in "${!all_members[@]}"; do
+  j=$((RANDOM % ($i + 1)))
+  temp=${all_members[$i]}
+  all_members[$i]=${all_members[$j]}
+  all_members[$j]=$temp
 done
 
 # 결과 출력

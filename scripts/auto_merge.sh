@@ -39,6 +39,7 @@ for PR_URL in $PRs; do
 
   # PR 체크아웃
   git checkout "$PR_NUMBER"
+  gh pr checkout "$PR_NUMBER"
 
   # PR 변경 사항 저장
   git add -A

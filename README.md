@@ -29,6 +29,7 @@ create 홍지훈 js
 ```
 
 만약 alias 가 먹히지 않았다면 프로젝트 루트 디렉토리에서 ./scripts/create.sh {본인이름} {확장자} 를 해주시면 됩니다.
+혹은 루트 디렉토리에서 source bash.bashrc 를 터미널에 입력하신 뒤엔 alias 가 동작합니다. 
 
 ```
 ex) ./scripts/create.sh 홍지훈

@@ -54,12 +54,12 @@ for ((i = 0; i < ${#lines[@]}; i++)); do
   fi
 done
 
-# exclude_members가 비어있는 경우
-if [[ -z "$exclude_members" ]]; then
-  # 랜덤 숫자로 선택된 문제 추가
-  random_problem_index=$((RANDOM % 7))
-  problems+=("${problems[$random_problem_index]}")
-fi
+# # exclude_members가 비어있는 경우
+# if [[ -z "$exclude_members" ]]; then
+#   # 랜덤 숫자로 선택된 문제 추가
+#   random_problem_index=$((RANDOM % 7))
+#   problems+=("${problems[$random_problem_index]}")
+# fi
 
 # Fisher-Yates 알고리즘 -> 인원 랜덤 섞기
 for i in "${!all_members[@]}"; do

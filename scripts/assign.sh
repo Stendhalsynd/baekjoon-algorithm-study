@@ -2,7 +2,7 @@
 
 # 변수 설정
 exclude_members=("$@")
-all_members=("문지영" "송성우" "양승혜" "이서연" "주지찬" "최재선" "홍지훈")
+all_members=("송성우" "양승혜" "최재선" "홍지훈")
 
 # 인자로 전달한 인원을 멤버에서 제외
 for member in "${exclude_members[@]}"; do
@@ -15,7 +15,8 @@ num_members=${#all_members[@]}
 num_problems=$((num_members > 2 ? 2 : num_members))
 
 add_member=()
-for i in {1..$num_members}; do
+
+for ((i = 0; i < 7 - $num_members; i++)); do
   random_index=$((RANDOM % ${#all_members[@]}))
   add_member+=("${all_members[random_index]}")
 done
@@ -28,20 +29,29 @@ script_dir=$(dirname "$(readlink -f "$0")")
 # 프로젝트의 루트 디렉토리 경로
 root_dir=$(dirname "$script_dir")
 
-current_week=$(date +%U)
+current_week=$((10#$(date +%U)))
 study_week=$((current_week + 11))
 file="$root_dir/scripts/problems.txt"
 
 # 파일을 한 줄씩 읽어 배열에 담기
 IFS=$'\n' read -d '' -r -a lines < "$file"
 
+total_boj=${#lines[@]}
+length=$((total_boj - 1))
+
 problems=()
 
 # 배열 순회하여 각 줄 출력
-for link in "${lines[@]}"; do
-  problem_number=$(echo $link | cut -d '/' -f5 )
-  problem_title=$(python $script_dir/crawling.py $problem_number)
-  problems+=("${problem_number}_${problem_title}")
+for ((i = 0; i < ${#lines[@]}; i++)); do
+  link=${lines[$i]}
+  if [[ $i < $length ]]; then
+    problem_number=$(echo $link | cut -d '/' -f5 )
+    problem_title=$(python ./scripts/crawling.py $problem_number)
+    problems+=("${problem_number}_${problem_title}")
+  else
+    problem_title=$(python ./scripts/crawling_psg.py $link)
+    problems+=("${problem_title}")
+  fi
 done
 
 # exclude_members가 비어있는 경우

@@ -1,7 +1,7 @@
-https://www.acmicpc.net/problem/11727
-https://www.acmicpc.net/problem/11052
-https://www.acmicpc.net/problem/15990
-https://www.acmicpc.net/problem/2225
-https://www.acmicpc.net/problem/11054
-https://www.acmicpc.net/problem/11066
-https://www.acmicpc.net/problem/12872
+https://www.acmicpc.net/problem/16937
+https://www.acmicpc.net/problem/3019
+https://www.acmicpc.net/problem/16938
+https://www.acmicpc.net/problem/17406
+https://www.acmicpc.net/problem/9944
+https://www.acmicpc.net/problem/16637
+https://school.programmers.co.kr/learn/courses/30/lessons/60058

@@ -10,7 +10,7 @@ script_dir=$(dirname "$(readlink -f "$0")")
 root_dir=$(dirname "$script_dir")
 
 # 현재 날짜의 주차 정보 가져오기
-current_week=$(date +%U)
+current_week=$((10#$(date +%U)))
 study_week=$((current_week + 11))
 week_folder="$root_dir/week$study_week"
 mkdir -p "$week_folder"
@@ -30,19 +30,19 @@ for (( i=0; i<${#lines[@]}; i++ )); do
   link="${lines[$i]}"
   
   # TODO: 19주차부터 지울 부분
-  problem_number=$(echo $link | cut -d '/' -f5 )
-  problem_title=$(python $script_dir/crawling.py $problem_number)
-  problem_folder="${week_folder}/BOJ_${problem_number}"
+  # problem_number=$(echo $link | cut -d '/' -f5 )
+  # problem_title=$(python $script_dir/crawling.py $problem_number)
+  # problem_folder="${week_folder}/BOJ_${problem_number}"
 
   # TODO: 19주차부터 PSG 에 적용
-  # if [[ $i < $length ]]; then
-  #   problem_number=$(echo $link | cut -d '/' -f5 )
-  #   problem_title=$(python $script_dir/crawling.py $problem_number)
-  #   problem_folder="${week_folder}/BOJ_${problem_number}"
-  # else
-  #   problem_title=$(python ./scripts/crawling_psg.py $link)
-  #   problem_folder="${week_folder}/PSG_${problem_title}"
-  # fi
+  if [[ $i < $length ]]; then
+    problem_number=$(echo $link | cut -d '/' -f5 )
+    problem_title=$(python $script_dir/crawling.py $problem_number)
+    problem_folder="${week_folder}/BOJ_${problem_number}"
+  else
+    problem_title=$(python ./scripts/crawling_psg.py $link)
+    problem_folder="${week_folder}/PSG_${problem_title}"
+  fi
 
   mkdir -p "$problem_folder"
 

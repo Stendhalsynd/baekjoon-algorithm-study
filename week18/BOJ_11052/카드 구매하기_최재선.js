@@ -1,22 +1,24 @@
 const fs = require('fs');
 
-const input = fs.readFileSync(process.env.LOGNAME === 'jake' ? './input.txt' : '/dev/stdin')
-  .toString().trim();
+const inputs = fs.readFileSync(process.env.LOGNAME === 'jake' ? './input.txt' : '/dev/stdin')
+  .toString().trim().split('\n');
 
-const [n, k] = input.split(' ').map(Number);
-const MOD = 1000000000;
-const dp = new Array(n + 1).fill(0);
-dp[0] = 1;
+const n = Number(inputs[0]);
+const p = inputs[1].split(' ').map(Number);
+const dp = [...p];
 
-let left = k;
+const getMax = (index) => {
+  let max = 0;
 
-while (left) {
-  for (let i = 1; i <= n; i += 1) {
-    dp[i] += dp[i - 1];
-    dp[i] %= MOD;
+  for (let i = 0; i < index; i += 1) {
+    max = Math.max(max, dp[i] + dp[index - 1 - i]);
   }
 
-  left -= 1;
+  return max;
+};
+
+for (let i = 1; i < n; i += 1) {
+  dp[i] = Math.max(dp[i], getMax(i));
 }
 
 console.log(dp.pop());

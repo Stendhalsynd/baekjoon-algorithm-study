@@ -2,7 +2,7 @@
 
 # 변수 설정
 exclude_members=("$@")
-all_members=("송성우" "양승혜" "최재선" "홍지훈")
+all_members=("송성우" "양승혜" "이서연" "홍지훈")
 
 # 인자로 전달한 인원을 멤버에서 제외
 for member in "${exclude_members[@]}"; do
@@ -37,7 +37,8 @@ file="$root_dir/scripts/problems.txt"
 IFS=$'\n' read -d '' -r -a lines < "$file"
 
 total_boj=${#lines[@]}
-length=$((total_boj - 1))
+# length=$((total_boj - 1))
+length=$((total_boj))
 
 problems=()
 
@@ -48,9 +49,9 @@ for ((i = 0; i < ${#lines[@]}; i++)); do
     problem_number=$(echo $link | cut -d '/' -f5 )
     problem_title=$(python ./scripts/crawling.py $problem_number)
     problems+=("${problem_number}_${problem_title}")
-  else
-    problem_title=$(python ./scripts/crawling_psg.py $link)
-    problems+=("${problem_title}")
+  # else
+  #   problem_title=$(python ./scripts/crawling_psg.py $link)
+  #   problems+=("${problem_title}")
   fi
 done
 

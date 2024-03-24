@@ -30,19 +30,19 @@ for (( i=0; i<${#lines[@]}; i++ )); do
   link="${lines[$i]}"
   
   # TODO: 19주차부터 지울 부분
-  # problem_number=$(echo $link | cut -d '/' -f5 )
-  # problem_title=$(python $script_dir/crawling.py $problem_number)
-  # problem_folder="${week_folder}/BOJ_${problem_number}"
+  problem_number=$(echo $link | cut -d '/' -f5 )
+  problem_title=$(python $script_dir/crawling.py $problem_number)
+  problem_folder="${week_folder}/BOJ_${problem_number}"
 
-  # TODO: 19주차부터 PSG 에 적용
-  if [[ $i < $length ]]; then
-    problem_number=$(echo $link | cut -d '/' -f5 )
-    problem_title=$(python $script_dir/crawling.py $problem_number)
-    problem_folder="${week_folder}/BOJ_${problem_number}"
-  else
-    problem_title=$(python ./scripts/crawling_psg.py $link)
-    problem_folder="${week_folder}/PSG_${problem_title}"
-  fi
+  # # TODO: 19주차부터 PSG 에 적용
+  # if [[ $i < $length ]]; then
+  #   problem_number=$(echo $link | cut -d '/' -f5 )
+  #   problem_title=$(python $script_dir/crawling.py $problem_number)
+  #   problem_folder="${week_folder}/BOJ_${problem_number}"
+  # else
+  #   problem_title=$(python ./scripts/crawling_psg.py $link)
+  #   problem_folder="${week_folder}/PSG_${problem_title}"
+  # fi
 
   mkdir -p "$problem_folder"
 
